@@ -1,0 +1,891 @@
+<!DOCTYPE html> <html lang="es"> <head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cera para Cabello | InfoStyle</title>
+
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+<!-- CSS PRINCIPAL -->
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+    /* =====================================================
+       PÁGINA DEL PRODUCTO
+       ===================================================== */
+
+    .product-detail-page {
+
+        padding: 70px 0 90px;
+
+        background: #f7f8fa;
+
+    }
+
+    /* =====================================================
+       CONTENEDOR
+       ===================================================== */
+
+    .product-detail {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 55px;
+
+        align-items: center;
+
+        background: white;
+
+        border: 1px solid #e3e7e9;
+
+        border-radius: 10px;
+
+        padding: 35px;
+
+        box-shadow:
+            0 15px 35px rgba(35, 52, 65, .06);
+
+    }
+
+    /* =====================================================
+       IMAGEN
+       ===================================================== */
+
+    .product-detail-image {
+
+        position: relative;
+
+        width: 100%;
+
+        height: 500px;
+
+        overflow: hidden;
+
+        border-radius: 8px;
+
+        background: #edf1f3;
+
+    }
+
+    .product-detail-image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+    }
+
+    .detail-tag {
+
+        position: absolute;
+
+        top: 18px;
+
+        left: 18px;
+
+        padding: 7px 11px;
+
+        border-radius: 4px;
+
+        background: #32485A;
+
+        color: white;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: .4px;
+
+    }
+
+    /* =====================================================
+       INFORMACIÓN
+       ===================================================== */
+
+    .product-detail-info {
+
+        padding: 10px 10px 10px 0;
+
+    }
+
+    .detail-category {
+
+        margin: 0 0 10px;
+
+        color: #89939a;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1px;
+
+    }
+
+    .product-detail-info h1 {
+
+        margin: 0 0 15px;
+
+        color: #273947;
+
+        font-size: clamp(34px, 5vw, 48px);
+
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+
+    }
+
+    .detail-rating {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        margin-bottom: 22px;
+
+        color: #697983;
+
+        font-size: 13px;
+
+    }
+
+    .detail-rating i {
+
+        color: #d49a2a;
+
+    }
+
+    .detail-description {
+
+        margin: 0 0 25px;
+
+        color: #76828a;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+    /* =====================================================
+       PRECIO
+       ===================================================== */
+
+    .detail-price {
+
+        margin-bottom: 25px;
+
+        color: #32485A;
+
+        font-size: 30px;
+
+        font-weight: 800;
+
+    }
+
+    /* =====================================================
+       CARACTERÍSTICAS
+       ===================================================== */
+
+    .detail-features {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+        margin-bottom: 30px;
+
+    }
+
+    .detail-feature {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 9px;
+
+        padding: 12px;
+
+        border-radius: 5px;
+
+        background: #f4f6f7;
+
+        color: #5f6d76;
+
+        font-size: 12px;
+
+    }
+
+    .detail-feature i {
+
+        color: #32485A;
+
+        font-size: 14px;
+
+    }
+
+    /* =====================================================
+       BOTONES
+       ===================================================== */
+
+    .detail-actions {
+
+        display: flex;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+    }
+
+    .buy-button {
+
+        height: 48px;
+
+        padding: 0 25px;
+
+        border: none;
+
+        border-radius: 5px;
+
+        background: #32485A;
+
+        color: white;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: .25s;
+
+    }
+
+    .buy-button:hover {
+
+        background: #263a4a;
+
+        transform: translateY(-1px);
+
+    }
+
+    .buy-button i {
+
+        margin-right: 8px;
+
+    }
+
+    .back-product-button {
+
+        height: 48px;
+
+        padding: 0 22px;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        border: 1px solid #d9dfe3;
+
+        border-radius: 5px;
+
+        background: white;
+
+        color: #32485A;
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        transition: .25s;
+
+    }
+
+    .back-product-button:hover {
+
+        border-color: #32485A;
+
+        transform: translateY(-1px);
+
+    }
+
+    /* =====================================================
+       INFORMACIÓN EXTRA
+       ===================================================== */
+
+    .product-extra {
+
+        margin-top: 30px;
+
+        padding: 25px;
+
+        border: 1px solid #e3e7e9;
+
+        border-radius: 8px;
+
+        background: white;
+
+    }
+
+    .product-extra h2 {
+
+        margin: 0 0 10px;
+
+        color: #293b49;
+
+        font-size: 20px;
+
+    }
+
+    .product-extra p {
+
+        margin: 0;
+
+        color: #76828a;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 850px) {
+
+        .product-detail {
+
+            grid-template-columns: 1fr;
+
+            gap: 30px;
+
+            padding: 25px;
+
+        }
+
+        .product-detail-image {
+
+            height: 420px;
+
+        }
+
+        .product-detail-info {
+
+            padding: 0;
+
+        }
+
+    }
+
+    @media (max-width: 550px) {
+
+        .product-detail-page {
+
+            padding: 45px 0 70px;
+
+        }
+
+        .product-detail {
+
+            padding: 18px;
+
+        }
+
+        .product-detail-image {
+
+            height: 330px;
+
+        }
+
+        .product-detail-info h1 {
+
+            font-size: 34px;
+
+        }
+
+        .detail-features {
+
+            grid-template-columns: 1fr;
+
+        }
+
+        .detail-actions {
+
+            flex-direction: column;
+
+        }
+
+        .buy-button,
+        .back-product-button {
+
+            width: 100%;
+
+        }
+
+    }
+
+</style>
+
+</head> <body> <!-- ===================================================== OVERLAY ===================================================== --> <div id="overlay"></div> <!-- ===================================================== HEADER ===================================================== --> <header>
+<button
+    id="menuBtn"
+    class="icon-btn"
+    aria-label="Abrir menú"
+>
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+
+<div class="brand-header">
+
+    <span>InfoStyle</span>
+
+</div>
+
+<div class="header-right">
+
+    <div class="search">
+
+        <input
+            type="text"
+            placeholder="Buscar..."
+            aria-label="Buscar"
+        >
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+    <button
+        class="icon-btn"
+        aria-label="Mi cuenta"
+    >
+
+        <i class="fa-regular fa-circle-user"></i>
+
+    </button>
+
+</div>
+
+</header> <!-- ===================================================== SIDEBAR ===================================================== --> <nav id="sidebar">
+<div class="sidebar-brand">
+
+    <h1>InfoStyle</h1>
+
+    <p class="slogan">
+
+        Tu cita con el estilo comienza aquí
+
+    </p>
+
+</div>
+
+<ul class="menu-list">
+
+    <!-- INICIO -->
+
+    <li class="menu-item">
+
+        <span
+            onclick="window.location.href='index.html'"
+        >
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Inicio</span>
+
+        </span>
+
+    </li>
+
+    <!-- PRODUCTOS -->
+
+    <li class="menu-item submenu-btn active">
+
+        <span>
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>Productos</span>
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down arrow"></i>
+
+        <ul class="submenu open">
+
+            <li>
+
+                <a href="productosm.html">
+
+                    Masculino
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="productosf.html">
+
+                    Femenino
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </li>
+
+    <!-- SERVICIOS -->
+
+    <li class="menu-item submenu-btn">
+
+        <span>
+
+            <i class="fa-solid fa-scissors"></i>
+
+            <span>Servicios</span>
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down arrow"></i>
+
+        <ul class="submenu">
+
+            <li>
+
+                <a href="barberias.html">
+
+                    Masculino
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="peluquerias.html">
+
+                    Femenino
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </li>
+
+    <!-- CONTACTO -->
+
+    <li class="menu-item">
+
+        <span
+            onclick="window.location.href='contactanos.html'"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>Contáctanos</span>
+
+        </span>
+
+    </li>
+
+    <!-- QUIÉNES SOMOS -->
+
+    <li class="menu-item">
+
+        <span
+            onclick="window.location.href='quienessomos.html'"
+        >
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span>¿Quiénes somos?</span>
+
+        </span>
+
+    </li>
+
+</ul>
+
+<!-- FOOTER SIDEBAR -->
+
+<div class="footerMenu">
+
+    <p>
+
+        <i class="fa-brands fa-instagram"></i>
+
+        @_infostyle_
+
+    </p>
+
+    <p>
+
+        <i class="fa-solid fa-envelope"></i>
+
+        infostyle2910@gmail.com
+
+    </p>
+
+    <p class="sidebar-location">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        Tuluá, Valle del Cauca
+
+    </p>
+
+</div>
+
+</nav> <!-- ===================================================== CONTENIDO ===================================================== --> <main>
+<section class="product-detail-page">
+
+    <div class="section-container">
+
+        <!-- PRODUCTO -->
+
+        <div class="product-detail">
+
+            <!-- IMAGEN -->
+
+            <div class="product-detail-image">
+
+                <img
+                    src="img/cera2.jpg"
+                    alt="Cera para Cabello"
+                >
+
+                <span class="detail-tag">
+
+                    POPULAR
+
+                </span>
+
+            </div>
+
+            <!-- INFORMACIÓN -->
+
+            <div class="product-detail-info">
+
+                <p class="detail-category">
+
+                    Cuidado capilar
+
+                </p>
+
+                <h1>
+
+                    Cera para Cabello
+
+                </h1>
+
+                <div class="detail-rating">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <span>
+
+                        Producto recomendado
+
+                    </span>
+
+                </div>
+
+                <p class="detail-description">
+
+                    Cera para cabello diseñada para ayudarte
+                    a conseguir un peinado definido, con
+                    fijación y un acabado profesional. Ideal
+                    para diferentes estilos y para mantener
+                    tu cabello en orden durante el día.
+
+                </p>
+
+                <div class="detail-price">
+
+                    $35.000
+
+                </div>
+
+                <!-- CARACTERÍSTICAS -->
+
+                <div class="detail-features">
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Fijación profesional
+
+                    </div>
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        Acabado definido
+
+                    </div>
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-scissors"></i>
+
+                        Ideal para peinados
+
+                    </div>
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Uso diario
+
+                    </div>
+
+                </div>
+
+                <!-- BOTONES -->
+
+                <div class="detail-actions">
+
+                    <button
+                        class="buy-button"
+                        onclick="alert('Para adquirir este producto, puedes comunicarte con InfoStyle.')"
+                    >
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Comprar producto
+
+                    </button>
+
+                    <a
+                        href="productosm.html"
+                        class="back-product-button"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Volver a productos
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INFORMACIÓN EXTRA -->
+
+        <div class="product-extra">
+
+            <h2>
+
+                Sobre este producto
+
+            </h2>
+
+            <p>
+
+                La Cera para Cabello es una opción práctica
+                para quienes buscan controlar y definir su
+                peinado. Su uso permite trabajar diferentes
+                estilos y mantener una apariencia cuidada.
+                Para conocer disponibilidad y realizar tu
+                compra, comunícate con InfoStyle.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <div>
+
+        <strong>InfoStyle</strong>
+
+        <span>
+
+            Tu cita con el estilo comienza aquí.
+
+        </span>
+
+    </div>
+
+    <div class="footer-right">
+
+        <span>
+
+            Tuluá, Valle del Cauca
+
+        </span>
+
+        <span>
+
+            © 2026 InfoStyle
+
+        </span>
+
+    </div>
+
+</footer>
+
+</main>
+ <!-- ===================================================== JAVASCRIPT ===================================================== -->
+ <script src="js/app.js"></script> </body> </html>

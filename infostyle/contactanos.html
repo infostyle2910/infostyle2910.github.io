@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contáctanos | InfoStyle</title>
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           CONTACTO
+           ===================================================== */
+
+        .contact-page {
+
+            min-height: calc(100vh - 64px);
+
+            padding: 70px 30px 90px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #f4f7f9 100%
+                );
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* Fondo decorativo */
+
+        .contact-page::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border: 1px solid rgba(50, 72, 90, .08);
+
+            border-radius: 50%;
+
+            right: -180px;
+
+            top: -180px;
+
+            pointer-events: none;
+        }
+
+
+        .contact-page::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+
+            height: 300px;
+
+            border: 1px solid rgba(50, 72, 90, .05);
+
+            border-radius: 50%;
+
+            left: -150px;
+
+            bottom: -120px;
+
+            pointer-events: none;
+        }
+
+
+        /* =====================================================
+           ENCABEZADO
+           ===================================================== */
+
+        .contact-header {
+
+            max-width: 800px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .contact-header .section-label {
+
+            margin-bottom: 10px;
+        }
+
+
+        .contact-header h1 {
+
+            margin: 0 0 15px;
+
+            color: #243442;
+
+            font-size: clamp(38px, 6vw, 58px);
+
+            letter-spacing: -1.5px;
+        }
+
+
+        .contact-header h1 span {
+
+            color: #32485A;
+        }
+
+
+        .contact-header p {
+
+            max-width: 620px;
+
+            margin: auto;
+
+            color: #66727b;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CONTENEDOR
+           ===================================================== */
+
+        .contact-container {
+
+            width: min(1050px, 100%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 360px 1fr;
+
+            gap: 25px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           INFORMACIÓN
+           ===================================================== */
+
+        .contact-info {
+
+            background: #32485A;
+
+            padding: 35px;
+
+            border-radius: 8px;
+
+            color: white;
+
+            box-shadow:
+                0 15px 35px rgba(35, 52, 65, .12);
+        }
+
+
+        .contact-info h2 {
+
+            margin: 0 0 12px;
+
+            color: white;
+
+            font-size: 25px;
+        }
+
+
+        .contact-info > p {
+
+            margin: 0 0 30px;
+
+            color: #c6d0d6;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .contact-icon {
+
+            min-width: 43px;
+
+            width: 43px;
+
+            height: 43px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, .10);
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+
+        .contact-item h3 {
+
+            margin: 0 0 5px;
+
+            color: white;
+
+            font-size: 14px;
+        }
+
+
+        .contact-item p {
+
+            margin: 0;
+
+            color: #c6d0d6;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        .contact-social {
+
+            margin-top: 30px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255, 255, 255, .12);
+        }
+
+
+        .contact-social p {
+
+            margin: 0 0 12px;
+
+            color: #aebbc3;
+
+            font-size: 12px;
+        }
+
+
+        .instagram-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            color: white;
+
+            font-size: 14px;
+
+            text-decoration: none;
+        }
+
+
+        .instagram-link:hover {
+
+            color: #dce4e8;
+        }
+
+
+        /* =====================================================
+           FORMULARIO
+           ===================================================== */
+
+        .contact-form {
+
+            background: white;
+
+            padding: 35px;
+
+            border: 1px solid #e3e7e9;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 15px 35px rgba(35, 52, 65, .08);
+        }
+
+
+        .contact-form h2 {
+
+            margin: 0 0 8px;
+
+            color: #293b49;
+
+            font-size: 25px;
+        }
+
+
+        .contact-form-description {
+
+            margin: 0 0 25px;
+
+            color: #7a858d;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        .form-group {
+
+            margin-bottom: 18px;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #32485A;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            border: 1px solid #d9dfe3;
+
+            border-radius: 4px;
+
+            padding: 12px;
+
+            outline: none;
+
+            background: white;
+
+            color: #263746;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 14px;
+
+            transition: .2s;
+        }
+
+
+        .form-group input {
+
+            height: 45px;
+        }
+
+
+        .form-group textarea {
+
+            min-height: 130px;
+
+            resize: vertical;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: #32485A;
+
+            box-shadow:
+                0 0 0 2px rgba(50, 72, 90, .06);
+        }
+
+
+        .contact-submit {
+
+            width: 100%;
+
+            height: 46px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            background: #32485A;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .25s;
+        }
+
+
+        .contact-submit:hover {
+
+            background: #263a4a;
+
+            transform: translateY(-1px);
+        }
+
+
+        .contact-submit i {
+
+            margin-left: 8px;
+        }
+
+
+        .contact-message {
+
+            margin: 15px 0 0;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .contact-footer {
+
+            margin-top: 35px;
+
+            text-align: center;
+
+            color: #89939a;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           FONDO CON LOGO
+           ===================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-image: url("img/logo.png");
+
+            background-repeat: repeat;
+
+            background-size: 120px;
+
+            opacity: .035;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .contact-container {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-info {
+
+                order: 2;
+            }
+
+
+            .contact-form {
+
+                order: 1;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .contact-page {
+
+                padding:
+                    50px 20px 70px;
+            }
+
+
+            .contact-header h1 {
+
+                font-size: 40px;
+            }
+
+
+            .contact-header p {
+
+                font-size: 15px;
+            }
+
+
+            .contact-info,
+            .contact-form {
+
+                padding: 25px;
+            }
+
+
+            .form-row {
+
+                grid-template-columns: 1fr;
+
+                gap: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     OVERLAY
+     ===================================================== -->
+
+<div id="overlay"></div>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header>
+
+    <button
+        id="menuBtn"
+        class="icon-btn"
+        aria-label="Abrir menú"
+    >
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+    <div class="brand-header">
+
+        <span>InfoStyle</span>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <div class="search">
+
+            <input
+                type="text"
+                placeholder="Buscar..."
+                aria-label="Buscar"
+            >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+
+
+        <button
+            class="icon-btn"
+            aria-label="Mi cuenta"
+        >
+
+            <i class="fa-regular fa-circle-user"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     SIDEBAR
+     ===================================================== -->
+
+<nav id="sidebar">
+
+
+    <div class="sidebar-brand">
+
+        <h1>InfoStyle</h1>
+
+        <p class="slogan">
+            Tu cita con el estilo comienza aquí
+        </p>
+
+    </div>
+
+
+    <ul class="menu-list">
+
+
+        <!-- INICIO -->
+
+        <li class="menu-item">
+
+            <span onclick="window.location.href='index.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Inicio</span>
+
+            </span>
+
+        </li>
+
+
+        <!-- PRODUCTOS -->
+
+        <li class="menu-item submenu-btn">
+
+            <span>
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span>Productos</span>
+
+            </span>
+
+
+            <i class="fa-solid fa-chevron-down arrow"></i>
+
+
+            <ul class="submenu">
+
+                <li>
+
+                    <a href="productosm.html">
+                        Masculino
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="productosf.html">
+                        Femenino
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- SERVICIOS -->
+
+        <li class="menu-item submenu-btn">
+
+            <span>
+
+                <i class="fa-solid fa-scissors"></i>
+
+                <span>Servicios</span>
+
+            </span>
+
+
+            <i class="fa-solid fa-chevron-down arrow"></i>
+
+
+            <ul class="submenu">
+
+                <li>
+
+                    <a href="barberias.html">
+                        Masculino
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="peluquerias.html">
+                        Femenino
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- CONTACTO -->
+
+        <li class="menu-item">
+
+            <span>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <span>Contáctanos</span>
+
+            </span>
+
+        </li>
+
+
+        <!-- QUIÉNES SOMOS -->
+
+        <li class="menu-item">
+
+            <span onclick="window.location.href='quienessomos.html'">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <span>¿Quiénes somos?</span>
+
+            </span>
+
+        </li>
+
+    </ul>
+
+
+    <!-- FOOTER SIDEBAR -->
+
+    <div class="footerMenu">
+
+        <p>
+
+            <i class="fa-brands fa-instagram"></i>
+
+            @_infostyle_
+
+        </p>
+
+
+        <p>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            infostyle2910@gmail.com
+
+        </p>
+
+
+        <p class="sidebar-location">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Tuluá, Valle del Cauca
+
+        </p>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     CONTENIDO
+     ===================================================== -->
+
+<main>
+
+
+    <section class="contact-page">
+
+
+        <!-- ENCABEZADO -->
+
+        <div class="contact-header">
+
+            <span class="section-label">
+                ESTAMOS PARA AYUDARTE
+            </span>
+
+
+            <h1>
+                Contácta<span>nos.</span>
+            </h1>
+
+
+            <p>
+
+                ¿Tienes alguna pregunta, sugerencia o quieres
+                conocer más sobre InfoStyle? Escríbenos y
+                estaremos encantados de escucharte.
+
+            </p>
+
+        </div>
+
+
+        <!-- CONTENIDO -->
+
+        <div class="contact-container">
+
+
+            <!-- =================================================
+                 INFORMACIÓN DE CONTACTO
+                 ================================================= -->
+
+            <div class="contact-info">
+
+                <h2>
+                    Hablemos
+                </h2>
+
+
+                <p>
+
+                    Puedes comunicarte con nosotros a través
+                    de cualquiera de estos medios.
+
+                </p>
+
+
+                <!-- CORREO -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Correo electrónico
+                        </h3>
+
+                        <p>
+                            infostyle2910@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- UBICACIÓN -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Ubicación
+                        </h3>
+
+                        <p>
+                            Tuluá, Valle del Cauca
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INSTAGRAM -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Instagram
+                        </h3>
+
+                        <p>
+                            @_infostyle_
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RED SOCIAL -->
+
+                <div class="contact-social">
+
+                    <p>
+                        Síguenos en nuestras redes
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="instagram-link"
+                    >
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                        @_infostyle_
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FORMULARIO
+                 ================================================= -->
+
+            <div class="contact-form">
+
+                <h2>
+                    Envíanos un mensaje
+                </h2>
+
+
+                <p class="contact-form-description">
+
+                    Completa el formulario y déjanos tu mensaje.
+                    Nos pondremos en contacto contigo.
+
+                </p>
+
+
+                <form id="contactForm">
+
+
+                    <!-- NOMBRE + CORREO -->
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                placeholder="Tu nombre"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="correo">
+                                Correo electrónico
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                placeholder="ejemplo@correo.com"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ASUNTO -->
+
+                    <div class="form-group">
+
+                        <label for="asunto">
+                            Asunto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="asunto"
+                            placeholder="¿En qué podemos ayudarte?"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- MENSAJE -->
+
+                    <div class="form-group">
+
+                        <label for="mensaje">
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            placeholder="Escribe tu mensaje..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- BOTÓN -->
+
+                    <button
+                        type="submit"
+                        class="contact-submit"
+                    >
+
+                        Enviar mensaje
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <p
+                    id="contactMessage"
+                    class="contact-message"
+                ></p>
+
+            </div>
+
+        </div>
+
+
+        <p class="contact-footer">
+
+            InfoStyle · Tuluá, Valle del Cauca · © 2026
+
+        </p>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div>
+
+            <strong>
+                InfoStyle
+            </strong>
+
+            <span>
+                Tu cita con el estilo comienza aquí.
+            </span>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            <span>
+                Tuluá, Valle del Cauca
+            </span>
+
+            <span>
+                © 2026 InfoStyle
+            </span>
+
+        </div>
+
+    </footer>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="js/app.js"></script>
+
+
+<script>
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+    const contactMessage =
+        document.getElementById("contactMessage");
+
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        contactMessage.style.color = "#32485A";
+
+        contactMessage.textContent =
+            "Mensaje enviado correctamente. ¡Gracias por contactarnos!";
+
+
+        contactForm.reset();
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

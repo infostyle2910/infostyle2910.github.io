@@ -1,0 +1,1037 @@
+<!DOCTYPE html> <html lang="es"> <head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Capa Masculina | InfoStyle</title>
+
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+<!-- CSS PRINCIPAL -->
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+    /* =====================================================
+       PÁGINA DEL PRODUCTO
+       ===================================================== */
+
+    .product-detail-page {
+
+        padding: 70px 0 90px;
+
+        background: #f7f8fa;
+
+    }
+
+    /* =====================================================
+       CONTENEDOR
+       ===================================================== */
+
+    .product-detail-container {
+
+        width: min(1100px, calc(100% - 30px));
+
+        margin: auto;
+
+    }
+
+    /* =====================================================
+       MIGAS DE PAN
+       ===================================================== */
+
+    .product-breadcrumb {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        margin-bottom: 30px;
+
+        color: #89939a;
+
+        font-size: 12px;
+
+    }
+
+    .product-breadcrumb a {
+
+        color: #697983;
+
+        text-decoration: none;
+
+        transition: .2s;
+
+    }
+
+    .product-breadcrumb a:hover {
+
+        color: #32485A;
+
+    }
+
+    .product-breadcrumb i {
+
+        font-size: 9px;
+
+        color: #aab3b8;
+
+    }
+
+    .product-breadcrumb span {
+
+        color: #32485A;
+
+        font-weight: 700;
+
+    }
+
+    /* =====================================================
+       CONTENEDOR PRINCIPAL
+       ===================================================== */
+
+    .product-detail-card {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        background: white;
+
+        border: 1px solid #e3e7e9;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        box-shadow:
+            0 15px 40px rgba(35, 52, 65, .07);
+
+    }
+
+    /* =====================================================
+       IMAGEN
+       ===================================================== */
+
+    .product-detail-image {
+
+        min-height: 550px;
+
+        background: #edf1f3;
+
+        position: relative;
+
+        overflow: hidden;
+
+    }
+
+    .product-detail-image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        min-height: 550px;
+
+        object-fit: cover;
+
+        display: block;
+
+    }
+
+    /* =====================================================
+       ETIQUETA
+       ===================================================== */
+
+    .detail-tag {
+
+        position: absolute;
+
+        top: 20px;
+
+        left: 20px;
+
+        padding: 8px 12px;
+
+        border-radius: 4px;
+
+        background: #32485A;
+
+        color: white;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: .5px;
+
+    }
+
+    /* =====================================================
+       INFORMACIÓN
+       ===================================================== */
+
+    .product-detail-info {
+
+        padding: 50px 45px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+    }
+
+    .detail-category {
+
+        margin: 0 0 12px;
+
+        color: #89939a;
+
+        font-size: 11px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1.5px;
+
+    }
+
+    .product-detail-info h1 {
+
+        margin: 0 0 15px;
+
+        color: #273947;
+
+        font-size: clamp(32px, 4vw, 46px);
+
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+
+    }
+
+    .detail-description {
+
+        margin: 0 0 25px;
+
+        color: #76828a;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+    /* =====================================================
+       PRECIO
+       ===================================================== */
+
+    .detail-price {
+
+        margin-bottom: 25px;
+
+        color: #32485A;
+
+        font-size: 30px;
+
+        font-weight: 800;
+
+    }
+
+    /* =====================================================
+       SEPARADOR
+       ===================================================== */
+
+    .detail-divider {
+
+        width: 100%;
+
+        height: 1px;
+
+        margin-bottom: 25px;
+
+        background: #e5e8ea;
+
+    }
+
+    /* =====================================================
+       CARACTERÍSTICAS
+       ===================================================== */
+
+    .detail-features {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px;
+
+        margin-bottom: 30px;
+
+    }
+
+    .detail-feature {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        color: #68757e;
+
+        font-size: 13px;
+
+    }
+
+    .detail-feature i {
+
+        width: 28px;
+
+        height: 28px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #edf1f3;
+
+        color: #32485A;
+
+        font-size: 12px;
+
+    }
+
+    /* =====================================================
+       BOTONES
+       ===================================================== */
+
+    .detail-actions {
+
+        display: flex;
+
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+    }
+
+    .buy-button {
+
+        min-height: 48px;
+
+        padding: 0 24px;
+
+        border: none;
+
+        border-radius: 5px;
+
+        background: #32485A;
+
+        color: white;
+
+        text-decoration: none;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: .25s;
+
+    }
+
+    .buy-button:hover {
+
+        background: #263a4a;
+
+        transform: translateY(-2px);
+
+    }
+
+    .back-products-button {
+
+        min-height: 48px;
+
+        padding: 0 20px;
+
+        border: 1px solid #d9dfe3;
+
+        border-radius: 5px;
+
+        background: white;
+
+        color: #32485A;
+
+        text-decoration: none;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        transition: .25s;
+
+    }
+
+    .back-products-button:hover {
+
+        border-color: #32485A;
+
+        transform: translateY(-2px);
+
+    }
+
+    /* =====================================================
+       INFORMACIÓN INFERIOR
+       ===================================================== */
+
+    .product-extra {
+
+        margin-top: 25px;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+
+    }
+
+    .extra-card {
+
+        padding: 22px;
+
+        background: white;
+
+        border: 1px solid #e3e7e9;
+
+        border-radius: 8px;
+
+        text-align: center;
+
+    }
+
+    .extra-card i {
+
+        margin-bottom: 10px;
+
+        color: #32485A;
+
+        font-size: 20px;
+
+    }
+
+    .extra-card h3 {
+
+        margin: 0 0 5px;
+
+        color: #293b49;
+
+        font-size: 14px;
+
+    }
+
+    .extra-card p {
+
+        margin: 0;
+
+        color: #89939a;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 800px) {
+
+        .product-detail-card {
+
+            grid-template-columns: 1fr;
+
+        }
+
+        .product-detail-image {
+
+            min-height: 420px;
+
+        }
+
+        .product-detail-image img {
+
+            min-height: 420px;
+
+        }
+
+        .product-detail-info {
+
+            padding: 35px 30px;
+
+        }
+
+        .product-extra {
+
+            grid-template-columns: 1fr;
+
+        }
+
+    }
+
+    @media (max-width: 500px) {
+
+        .product-detail-page {
+
+            padding: 45px 0 70px;
+
+        }
+
+        .product-detail-container {
+
+            width: calc(100% - 20px);
+
+        }
+
+        .product-detail-image {
+
+            min-height: 350px;
+
+        }
+
+        .product-detail-image img {
+
+            min-height: 350px;
+
+        }
+
+        .product-detail-info {
+
+            padding: 30px 22px;
+
+        }
+
+        .detail-features {
+
+            grid-template-columns: 1fr;
+
+        }
+
+        .detail-actions {
+
+            flex-direction: column;
+
+        }
+
+        .buy-button,
+        .back-products-button {
+
+            width: 100%;
+
+        }
+
+    }
+
+</style>
+
+</head> <body> <!-- ===================================================== OVERLAY ===================================================== --> <div id="overlay"></div> <!-- ===================================================== HEADER ===================================================== --> <header>
+<button
+    id="menuBtn"
+    class="icon-btn"
+    aria-label="Abrir menú"
+>
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+
+<div class="brand-header">
+
+    <span>InfoStyle</span>
+
+</div>
+
+<div class="header-right">
+
+    <div class="search">
+
+        <input
+            type="text"
+            placeholder="Buscar..."
+            aria-label="Buscar"
+        >
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+    <button
+        class="icon-btn"
+        aria-label="Mi cuenta"
+    >
+
+        <i class="fa-regular fa-circle-user"></i>
+
+    </button>
+
+</div>
+
+</header> <!-- ===================================================== SIDEBAR ===================================================== --> <nav id="sidebar">
+<div class="sidebar-brand">
+
+    <h1>InfoStyle</h1>
+
+    <p class="slogan">
+
+        Tu cita con el estilo comienza aquí
+
+    </p>
+
+</div>
+
+<ul class="menu-list">
+
+    <!-- INICIO -->
+
+    <li class="menu-item">
+
+        <span
+            onclick="window.location.href='index.html'"
+        >
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Inicio</span>
+
+        </span>
+
+    </li>
+
+    <!-- PRODUCTOS -->
+
+    <li class="menu-item submenu-btn active">
+
+        <span>
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>Productos</span>
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down arrow"></i>
+
+        <ul class="submenu open">
+
+            <li>
+
+                <a href="productosm.html">
+
+                    Masculino
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="productosf.html">
+
+                    Femenino
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </li>
+
+    <!-- SERVICIOS -->
+
+    <li class="menu-item submenu-btn">
+
+        <span>
+
+            <i class="fa-solid fa-scissors"></i>
+
+            <span>Servicios</span>
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down arrow"></i>
+
+        <ul class="submenu">
+
+            <li>
+
+                <a href="barberias.html">
+
+                    Masculino
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="peluquerias.html">
+
+                    Femenino
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </li>
+
+    <!-- CONTACTO -->
+
+    <li class="menu-item">
+
+        <span
+            onclick="window.location.href='contactanos.html'"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>Contáctanos</span>
+
+        </span>
+
+    </li>
+
+    <!-- QUIÉNES SOMOS -->
+
+    <li class="menu-item">
+
+        <span
+            onclick="window.location.href='quienessomos.html'"
+        >
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span>¿Quiénes somos?</span>
+
+        </span>
+
+    </li>
+
+</ul>
+
+<!-- FOOTER SIDEBAR -->
+
+<div class="footerMenu">
+
+    <p>
+
+        <i class="fa-brands fa-instagram"></i>
+
+        @_infostyle_
+
+    </p>
+
+    <p>
+
+        <i class="fa-solid fa-envelope"></i>
+
+        infostyle2910@gmail.com
+
+    </p>
+
+    <p class="sidebar-location">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        Tuluá, Valle del Cauca
+
+    </p>
+
+</div>
+
+</nav> <!-- ===================================================== CONTENIDO ===================================================== --> <main>
+<section class="product-detail-page">
+
+    <div class="product-detail-container">
+
+        <!-- MIGAS -->
+
+        <div class="product-breadcrumb">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <a href="productosm.html">
+                Productos masculinos
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Capa Masculina
+            </span>
+
+        </div>
+
+        <!-- PRODUCTO -->
+
+        <div class="product-detail-card">
+
+            <!-- IMAGEN -->
+
+            <div class="product-detail-image">
+
+                <img
+                    src="img/capa.png"
+                    alt="Capa Masculina de barbería"
+                >
+
+                <span class="detail-tag">
+
+                    DESTACADO
+
+                </span>
+
+            </div>
+
+            <!-- INFORMACIÓN -->
+
+            <div class="product-detail-info">
+
+                <p class="detail-category">
+
+                    BARBERÍA
+
+                </p>
+
+                <h1>
+
+                    Capa Masculina
+
+                </h1>
+
+                <p class="detail-description">
+
+                    Capa de barbería negra, ligera e impermeable,
+                    diseñada para proteger la ropa durante el corte
+                    de cabello y otros servicios de barbería.
+
+                </p>
+
+                <div class="detail-price">
+
+                    $120.000
+
+                </div>
+
+                <div class="detail-divider"></div>
+
+                <!-- CARACTERÍSTICAS -->
+
+                <div class="detail-features">
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-droplet"></i>
+
+                        <span>
+                            Material impermeable
+                        </span>
+
+                    </div>
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-feather"></i>
+
+                        <span>
+                            Diseño ligero
+                        </span>
+
+                    </div>
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-scissors"></i>
+
+                        <span>
+                            Ideal para barbería
+                        </span>
+
+                    </div>
+
+                    <div class="detail-feature">
+
+                        <i class="fa-solid fa-shirt"></i>
+
+                        <span>
+                            Protege la ropa
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- BOTONES -->
+
+                <div class="detail-actions">
+
+                    <a
+                        href="mailto:infostyle2910@gmail.com?subject=Consulta%20por%20Capa%20Masculina"
+                        class="buy-button"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        Consultar producto
+
+                    </a>
+
+                    <a
+                        href="productosm.html"
+                        class="back-products-button"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Volver a productos
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INFORMACIÓN EXTRA -->
+
+        <div class="product-extra">
+
+            <div class="extra-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>
+                    Compra segura
+                </h3>
+
+                <p>
+                    Comunícate con InfoStyle
+                    para conocer disponibilidad.
+                </p>
+
+            </div>
+
+            <div class="extra-card">
+
+                <i class="fa-solid fa-truck"></i>
+
+                <h3>
+                    Consulta de entrega
+                </h3>
+
+                <p>
+                    Pregunta por las opciones de
+                    entrega disponibles en Tuluá.
+                </p>
+
+            </div>
+
+            <div class="extra-card">
+
+                <i class="fa-solid fa-comments"></i>
+
+                <h3>
+                    Atención personalizada
+                </h3>
+
+                <p>
+                    Resuelve tus dudas antes de
+                    realizar tu compra.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================================
+     FOOTER
+     ================================================= -->
+
+<footer>
+
+    <div>
+
+        <strong>InfoStyle</strong>
+
+        <span>
+
+            Tu cita con el estilo comienza aquí.
+
+        </span>
+
+    </div>
+
+    <div class="footer-right">
+
+        <span>
+
+            Tuluá, Valle del Cauca
+
+        </span>
+
+        <span>
+
+            © 2026 InfoStyle
+
+        </span>
+
+    </div>
+
+</footer>
+
+</main> 
+<!-- ===================================================== JAVASCRIPT ===================================================== --> 
+ <script src="js/app.js"></script> </body> </html>

@@ -1,0 +1,129 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro Prestador - InfoStyle</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        body{
+            background:#f5f5f5;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .contenedor{
+
+            width:500px;
+            margin:40px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 15px rgba(0,0,0,.15);
+
+        }
+
+        h2{
+
+            text-align:center;
+            color:#32485A;
+            margin-bottom:25px;
+
+        }
+
+        input,select{
+
+            width:100%;
+            padding:12px;
+            margin-bottom:18px;
+            border:1px solid #ccc;
+            font-size:16px;
+
+        }
+
+        button{
+
+            width:100%;
+            padding:12px;
+            border:none;
+            background:#32485A;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+
+        }
+
+        button:hover{
+
+            background:#263847;
+
+        }
+
+        body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-image:url("img/logo.png");
+
+    background-repeat:repeat;
+
+    background-size:120px;
+
+    opacity:0.06;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+    </style>
+
+</head>
+<body>
+
+<div class="contenedor">
+
+<h2>Registro de Prestador</h2>
+
+<input type="text" id="nombreCompleto" placeholder="Nombre completo">
+
+<select id="profesionServicio">
+
+    <option value="">Seleccione una profesión</option>
+    <option>Barbero/a</option>
+    <option>Peluquero/a</option>
+    <option>Estilista</option>
+
+</select>
+
+<input type="text" id="codigoPostal" placeholder="Código Postal">
+
+<label>Foto de perfil</label>
+
+<input type="file" id="foto" accept="image/*">
+
+<button id="guardarPrestador">
+
+Finalizar Registro
+
+</button>
+
+</div>
+
+<script src="js/prestador.js"></script>
+
+</body>
+</html>

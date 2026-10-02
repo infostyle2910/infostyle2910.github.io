@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrarse - InfoStyle</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        body {
+            background: #f4f4f4;
+        }
+
+
+        /* ================================
+           CONTENEDOR
+        ================================= */
+
+        .registro {
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+        }
+
+
+        /* ================================
+           CAJA DE REGISTRO
+        ================================= */
+
+        .registro-box {
+            width: 400px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 0 15px rgba(0, 0, 0, .15);
+        }
+
+
+        /* ================================
+           TITULO
+        ================================= */
+
+        .registro-box h2 {
+
+            text-align: center;
+
+            margin: 0 0 8px;
+
+            color: #32485A;
+
+        }
+
+
+        .registro-descripcion {
+
+            text-align: center;
+
+            margin: 0 0 25px;
+
+            color: #7a858d;
+
+            font-size: 14px;
+
+        }
+
+
+        /* ================================
+           ETIQUETAS
+        ================================= */
+
+        .registro-box label {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #32485A;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* ================================
+           INPUTS
+        ================================= */
+
+        .registro-box input,
+        .registro-box select {
+
+            width: 100%;
+
+            padding: 12px;
+
+            margin-bottom: 18px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 4px;
+
+            outline: none;
+
+            background: white;
+
+            color: #263746;
+
+            font-size: 14px;
+
+        }
+
+
+        .registro-box input:focus,
+        .registro-box select:focus {
+
+            border-color: #32485A;
+
+        }
+
+
+        /* ================================
+           BOTON
+        ================================= */
+
+        .registro-box button {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 4px;
+
+            background: #32485A;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .2s;
+
+        }
+
+
+        .registro-box button:hover {
+
+            background: #283a48;
+
+        }
+
+
+        /* ================================
+           ENLACE LOGIN
+        ================================= */
+
+        .login-link {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #66727b;
+
+            font-size: 14px;
+
+        }
+
+
+        .login-link a {
+
+            color: #32485A;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+        }
+
+
+        .login-link a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* ================================
+           MENSAJE
+        ================================= */
+
+        .mensaje {
+
+            margin-top: 15px;
+
+            text-align: center;
+
+            font-size: 14px;
+
+        }
+
+
+        /* ================================
+           FONDO CON LOGO
+        ================================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-image: url("img/logo.png");
+
+            background-repeat: repeat;
+
+            background-size: 120px;
+
+            opacity: 0.06;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+        }
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 500px) {
+
+            .registro-box {
+
+                width: 100%;
+
+                padding: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="registro">
+
+
+    <div class="registro-box">
+
+
+        <h2>
+            Crear una cuenta
+        </h2>
+
+
+        <p class="registro-descripcion">
+            Regístrate en InfoStyle
+        </p>
+
+
+        <form id="registroForm">
+
+
+            <!-- USUARIO -->
+
+            <label for="nuevoUsuario">
+                Usuario
+            </label>
+
+            <input
+                type="text"
+                id="nuevoUsuario"
+                placeholder="Ingresa tu usuario"
+                required
+            >
+
+
+            <!-- CORREO -->
+
+            <label for="correo">
+                Correo electrónico
+            </label>
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="ejemplo@correo.com"
+                required
+            >
+
+
+            <!-- TELEFONO -->
+
+            <label for="telefono">
+                Número de teléfono
+            </label>
+
+            <input
+                type="tel"
+                id="telefono"
+                placeholder="Número de teléfono"
+                required
+            >
+
+
+            <!-- TIPO DE CUENTA -->
+
+            <label for="profesion">
+                Tipo de cuenta
+            </label>
+
+            <select id="profesion" required>
+
+                <option value="Cliente">
+                    Cliente
+                </option>
+
+                <option value="Prestador de servicios">
+                    Prestador de servicios
+                </option>
+
+            </select>
+
+
+            <!-- CONTRASEÑA -->
+
+            <label for="nuevaClave">
+                Contraseña
+            </label>
+
+            <input
+                type="password"
+                id="nuevaClave"
+                placeholder="Crea una contraseña"
+                required
+            >
+
+
+            <!-- BOTON -->
+
+            <button type="submit">
+                Crear cuenta
+            </button>
+
+
+        </form>
+
+
+        <!-- VOLVER AL LOGIN -->
+
+        <p class="login-link">
+
+            ¿Ya tienes una cuenta?
+
+            <a href="login.html">
+                Iniciar sesión
+            </a>
+
+        </p>
+
+
+        <!-- MENSAJE -->
+
+        <p
+            class="mensaje"
+            id="mensaje"
+        ></p>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- JAVASCRIPT DEL REGISTRO -->
+
+<script src="js/registro.js"></script>
+
+
+</body>
+
+</html>

@@ -1,118 +1,175 @@
-// =====================================================
-// INFOSTYLE
-// LOGIN.JS
-// =====================================================
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Iniciar Sesión - InfoStyle</title>
 
-// Obtener elementos del formulario
-const loginBtn = document.getElementById("loginBtn");
-const mensaje = document.getElementById("mensaje");
+    <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        body {
+            background: #f4f4f4;
+        }
 
-// =====================================================
-// INICIAR SESIÓN
-// =====================================================
+        .login {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-loginBtn.addEventListener("click", () => {
+        .login-box {
+            width: 360px;
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+        }
 
-    const usuario = document
-        .getElementById("usuario")
-        .value
-        .trim();
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #32485A;
+        }
 
-    const clave = document
-        .getElementById("clave")
-        .value;
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            outline: none;
+            border-radius: 4px;
+        }
 
+        .login-box input:focus {
+            border-color: #32485A;
+        }
 
-    // Limpiar mensaje anterior
-    mensaje.textContent = "";
+        .login-box button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            background: #32485A;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
 
+        .login-box button:hover {
+            background: #283a48;
+        }
 
-    // =================================================
-    // VALIDAR CAMPOS
-    // =================================================
+        .registro-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #66727b;
+            font-size: 14px;
+        }
 
-    if (usuario === "" || clave === "") {
+        .registro-link a {
+            color: #32485A;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-        mensaje.style.color = "red";
+        .registro-link a:hover {
+            text-decoration: underline;
+        }
 
-        mensaje.textContent =
-            "Completa todos los campos.";
+        .mensaje {
+            margin-top: 15px;
+            text-align: center;
+            color: red;
+        }
 
-        return;
-    }
+        body::before {
+            content: "";
 
+            position: fixed;
 
-    // =================================================
-    // OBTENER USUARIOS REGISTRADOS
-    // =================================================
+            top: 0;
+            left: 0;
 
-    const usuarios =
-        JSON.parse(localStorage.getItem("usuarios")) || [];
+            width: 100%;
+            height: 100%;
 
+            background-image: url("img/logo.png");
 
-    // =================================================
-    // BUSCAR USUARIO
-    // =================================================
+            background-repeat: repeat;
+            background-size: 120px;
 
-    const encontrado = usuarios.find(
-        u =>
-            u.usuario === usuario &&
-            u.clave === clave
-    );
+            opacity: 0.06;
 
+            pointer-events: none;
 
-    // =================================================
-    // USUARIO ENCONTRADO
-    // =================================================
+            z-index: -1;
+        }
+    </style>
+</head>
 
-    if (encontrado) {
+<body>
 
-        alert("Bienvenido " + encontrado.usuario);
+<div class="login">
 
+    <div class="login-box">
 
-        // Guardar usuario que inició sesión
-        localStorage.setItem(
-            "usuarioActual",
-            JSON.stringify(encontrado)
-        );
+        <h2>Iniciar Sesión</h2>
 
+        <input
+            type="text"
+            id="usuario"
+            placeholder="Usuario"
+        >
 
-        // =================================================
-        // REDIRECCIÓN SEGÚN TIPO DE USUARIO
-        // =================================================
+        <input
+            type="password"
+            id="clave"
+            placeholder="Contraseña"
+        >
 
-        if (encontrado.profesion === "Cliente") {
+        <button id="loginBtn">
+            Ingresar
+        </button>
 
-            window.location.href = "cliente.html";
+        <p class="registro-link">
+            ¿No tienes una cuenta?
+            <a href="registro.html">Regístrate</a>
+        </p>
 
-        } else if (
-            encontrado.profesion === "Prestador de servicios"
-        ) {
+        <p class="mensaje" id="mensaje"></p>
 
-            window.location.href = "prestador.html";
+    </div>
+
+</div>
+
+<script>
+    const usuario = "admin";
+    const contraseña = "1234";
+
+    document.getElementById("loginBtn").onclick = () => {
+
+        const user = document.getElementById("usuario").value;
+        const pass = document.getElementById("clave").value;
+
+        if (user === usuario && pass === contraseña) {
+
+            alert("Bienvenido a InfoStyle");
+
+            window.location.href = "index.html";
 
         } else {
 
-            // Por seguridad, si el tipo no existe
-            mensaje.style.color = "red";
-
-            mensaje.textContent =
-                "Tipo de usuario no válido.";
+            document.getElementById("mensaje").textContent =
+                "Usuario o contraseña incorrectos";
         }
+    };
+</script>
 
+<script src="js/login.js"></script>
 
-    } else {
-
-        // =================================================
-        // DATOS INCORRECTOS
-        // =================================================
-
-        mensaje.style.color = "red";
-
-        mensaje.textContent =
-            "Usuario o contraseña incorrectos.";
-    }
-
-});
+</body>
+</html>
